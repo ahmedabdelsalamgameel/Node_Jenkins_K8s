@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-svc
+  namespace: jn-ns
+spec:
+  selector: 
+    app: jn-dep
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
